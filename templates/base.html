@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTP-8">
+    <meta name"viewpoint" content="width=device-width, intial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static "app.css" %}"/>
+</head>
+{% block css_files %}{% endblock css_files %}
+<body>
+    <header id="main-navigation">
+        <h1><a href="{% url "starting-page"%}">Parsa's Blog</a></h1>
+        <nav>
+            <a href="{% url "posts-page" %}">All Posts</a>
+        </nav>
+    </header>
+    {% block content %}{% endblock content %}
+</body>
+</html>
